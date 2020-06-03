@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Nav from "./Nav";
+import DogList from "./DogList";
 import whiskey from "./images/whiskey.jpg";
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
@@ -45,7 +46,7 @@ class App extends Component {
     return (
       <div>
         <Nav />
-        <Route path="/dogs" render={() => <h1>DOG LIST</h1>} />
+        <Route path="/dogs" render={() => <DogList dogs={this.props.dogs} />} />
       </div>
     );
   }
