@@ -18,7 +18,9 @@ class Routes extends Component {
         <Route
           exact
           path="/dogs"
-          render={() => <DogList dogs={this.props.dogs} />}
+          render={(routeProps) => (
+            <DogList {...routeProps} dogs={this.props.dogs} />
+          )}
         />
         <Route exact path="/dogs/:name" render={getDog} />
         <Redirect to="/dogs" />

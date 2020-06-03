@@ -6,13 +6,18 @@ class DogList extends Component {
   render() {
     return (
       <div className="DogList">
-        <h1 className="display-1 text-center">Dog List</h1>
+        <h1 className="display-1 text-center mb-5 mt-3">Dog List</h1>
         <div className="row">
           {this.props.dogs.map((dog) => (
             <div className="Dog col-lg-4 col-md-6 text-center" key={dog.name}>
               <img alt={dog.name} src={dog.src} />
-              <h3>
-                <Link to={`/dogs/${dog.name.toLowerCase()}`}>{dog.name}</Link>
+              <h3 className="mt-3">
+                <Link
+                  className="underline"
+                  to={`/dogs/${dog.name.toLowerCase()}`}
+                >
+                  {dog.name}
+                </Link>
               </h3>
             </div>
           ))}

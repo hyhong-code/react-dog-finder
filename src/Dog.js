@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./Dog.css";
 
 class Dog extends Component {
   render() {
@@ -21,7 +22,7 @@ class Dog extends Component {
               ))}
             </ul>
             <div className="card-body">
-              <Link className="btn btn-secondary" to="/dogs">
+              <Link className="btn btn-info" to="/dogs">
                 GO BACK
               </Link>
             </div>
