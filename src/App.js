@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Nav from "./Nav";
 import DogList from "./DogList";
+import Dog from "./Dog";
 import whiskey from "./images/whiskey.jpg";
 import hazel from "./images/hazel.jpg";
 import tubby from "./images/tubby.jpg";
@@ -43,10 +44,25 @@ class App extends Component {
     ],
   };
   render() {
+    const getDog = (routeProps) => {
+      const name = routeProps.match.params.name;
+      const thisDog = this.props.dogs.find(
+        (dog) => dog.name.toLowerCase() === name.toLowerCase()
+      );
+      return <Dog {...routeProps} dog={thisDog} />;
+    };
+
     return (
       <div>
         <Nav />
-        <Route path="/dogs" render={() => <DogList dogs={this.props.dogs} />} />
+        <Switch>
+          <Route
+            exact
+            path="/dogs"
+            render={() => <DogList dogs={this.props.dogs} />}
+          />
+          <Route exact path="/dogs/:name" render={getDog} />
+        </Switch>
       </div>
     );
   }
