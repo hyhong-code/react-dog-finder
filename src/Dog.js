@@ -24,7 +24,7 @@ class Dog extends Component {
                 ))}
               </ul>
               <div className="card-body">
-                <Link className="btn btn-secondary" exact to="/dogs">
+                <Link className="btn btn-secondary" to="/dogs">
                   GO BACK
                 </Link>
               </div>

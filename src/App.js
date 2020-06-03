@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Nav from "./Nav";
+import Navbar from "./Navbar";
 import DogList from "./DogList";
 import Dog from "./Dog";
 import whiskey from "./images/whiskey.jpg";
@@ -54,7 +54,7 @@ class App extends Component {
 
     return (
       <div>
-        <Nav />
+        <Navbar dogs={this.props.dogs} />
         <Switch>
           <Route
             exact
