@@ -1,6 +1,6 @@
 # React practice project
 
-### Practiced using lifecycle methods for AJAX
+### Practiced using React Router, Route, Switch, Link, NavLink, Redirect. routeProps: match.param & history
 
 #### Previews:
 
